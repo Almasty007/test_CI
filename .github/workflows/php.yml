@@ -47,7 +47,10 @@ jobs:
 
     - name: Install Xdebug
       run: sudo apt-get install -y php-xdebug
-
+    
+    - name: environnement
+      run: export XDEBUG_MODE=coverage
+    
     - name: couverture sous format xml
       run: ../vendor/bin/phpunit -d XDEBUG_MODE=coverage --coverage-xml .
       working-directory: tst
