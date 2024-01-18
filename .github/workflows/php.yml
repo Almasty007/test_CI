@@ -52,7 +52,7 @@ jobs:
       run: export XDEBUG_MODE=coverage
 
     - name: couverture sous format xml
-      run: phpunit --coverage-xml .
+      run: ../vendor/bin/phpunit --coverage-xml .
       working-directory: tst
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
