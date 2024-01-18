@@ -45,6 +45,15 @@ jobs:
       run: ../vendor/bin/phpunit --no-coverage
       working-directory: tst
 
+    - name: Install Xdebug
+      run: sudo apt-get install php-xdebug
+
+    - name: export en coverage
+      run: export XDEBUG_MODE=coverage
+
+    - name: couverture sous format xml
+      run: phpunit --coverage-xml .
+
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
