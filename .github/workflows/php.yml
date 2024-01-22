@@ -59,6 +59,7 @@ jobs:
           filename: ./tst/my-cobertura-coverage.xml
           format: markdown
           output: both
+          badge: true
 
     - name: echo code coverage
       run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
