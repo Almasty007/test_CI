@@ -42,9 +42,9 @@ jobs:
     - name: Install Google Cloud Storage
       run: composer require google/cloud-storage
 
-    - name: Run unit tests
-      run: ../vendor/bin/phpunit --no-coverage
-      working-directory: tst
+#    - name: Run unit tests
+#      run: ../vendor/bin/phpunit --no-coverage
+#      working-directory: tst
 
     - name: Install Xdebug
       run: sudo apt-get install -y php-xdebug
@@ -60,4 +60,7 @@ jobs:
           format: markdown
           output: both
 
+    - name: echo code coverage
+      run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+    
     
