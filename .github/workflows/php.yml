@@ -56,8 +56,7 @@ jobs:
     - name: Code Coverage Summary Report
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
-          filename: my-cobertura-coverage.xml
-          working-directory: tst
+          filename: ./tst/my-cobertura-coverage.xml
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
