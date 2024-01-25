@@ -63,5 +63,13 @@ jobs:
 
     - name: echo code coverage
       run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+
+    - name: install phpcs
+      run: curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && \
+           wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+
+    - name: use phpcs
+      run: php phpcs.phar .
+
     
     
