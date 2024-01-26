@@ -33,7 +33,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
 
-    - name: Install dependencies
+    - name: Installing dependencies
       run: composer install --prefer-dist --no-progress
 
     - name: Setup PHPunit
