@@ -68,7 +68,18 @@ jobs:
       run: curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
 
     - name: use phpcs
-      run: php phpcs.phar --colors . >> $GITHUB_STEP_SUMMARY
+      run: php phpcs.phar --colors . >> ../phpcs-res.txt
+
+    - name: Commit changes
+      run: |
+        git config --global user.email "nat2013@laposte.net"
+        git config --global user.name "Almasty007"
+        git add phpcs-res.txt
+        git commit -m "ajout du phpcs-res"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 # phpcs-res.md
     
     
