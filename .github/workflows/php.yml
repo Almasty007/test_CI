@@ -68,7 +68,7 @@ jobs:
       run: curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
 
     - name: use phpcs
-      run: php phpcs.phar --colors . >> ../phpcs-res.txt
+      run: php phpcs.phar . > phpcs-res.txt
 
     - name: Commit changes
       run: |
