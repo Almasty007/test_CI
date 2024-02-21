@@ -42,7 +42,7 @@ jobs:
     - name: Install Google Cloud Storage
       run: composer require google/cloud-storage
 
-#    - name: Run unit tests
+#    - name: run unit tests
 #      run: ../vendor/bin/phpunit --no-coverage
 #      working-directory: tst
 
