@@ -76,7 +76,7 @@ jobs:
           git config user.email nat2013@laposte.net
           git add phpcs-res.txt
           git commit -m "generated"
-          git push
+          git push origin HEAD:main
 
     
     
